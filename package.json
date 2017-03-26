@@ -1,0 +1,32 @@
+{
+  "name": "pactice2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klsva/pr2.git"
+  },
+  "author": "klsva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/klsva/pr2/issues"
+  },
+  "homepage": "https://github.com/klsva/pr2#readme",
+  "devDependencies": {
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cdn": "^1.1.3",
+    "gulp-clean": "^0.3.2",
+    "gulp-google-cdn": "^2.1.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1"
+  },
+  "dependencies": {
+    "gulp": "github:gulpjs/gulp#4.0"
+  }
+}

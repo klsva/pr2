@@ -1,0 +1,23 @@
+{
+  "name": "practice2",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "klsva"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.scss": "*",
+    "normalize-scss": "normalize.scss#^6.0.0",
+    "jquery": "^3.2.1",
+    "jquery-migrate-official": "^3.0.0"
+  }
+}

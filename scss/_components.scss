@@ -1,0 +1,49 @@
+.council{
+    padding: 20px 0px;
+    @extend %clearfix;
+    &-card{
+        text-align: center;
+        border-radius: 3px;
+        background: $bgc;
+        margin: 20px 0;
+        padding: 20px 10px;
+        box-shadow: 0 2px 3px rgba(0,0,0,.3);
+        &-avatar{
+            border: 2px solid $brdc;
+            height: 130px;
+            width: 130px;
+            overflow: hidden;
+            margin: 0 auto;
+            border-radius: 50%;
+            box-shadow: 0 2px 3px rgba(0,0,0,.3);
+            transition: all .2s ease-in-out;
+            >.img{
+                display: block;
+                min-width: 100%;
+                max-width: 100%;
+            }
+        }
+        &-descr-name{
+            font-weight: bold;
+            color: darken($brdc,50%);
+            font-size: 0.9em;
+            line-height: 1.48;
+            padding: 10px;
+        }
+        &-descr-position{
+            padding: 10px;
+            font-size: 0.8em;
+            &:before{
+                display: block;
+                width: 30%;
+                margin: 0 auto;
+                content: '';
+                height: 3px;
+                background: $color;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+@include grid(3);
+//@include cicada($pclass,$chclass);

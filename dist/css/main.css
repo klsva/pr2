@@ -1,0 +1,79 @@
+.council:before, .council:after {
+  content: '';
+  display: table;
+}
+
+.council:after {
+  clear: both;
+}
+
+.council {
+  padding: 20px 0px;
+}
+
+.council-card {
+  text-align: center;
+  border-radius: 3px;
+  background: #fafafa;
+  margin: 20px 0;
+  padding: 20px 10px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.council-card-avatar {
+  border: 2px solid #eaeaea;
+  height: 130px;
+  width: 130px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  transition: all .2s ease-in-out;
+}
+
+.council-card-avatar > .img {
+  display: block;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.council-card-descr-name {
+  font-weight: bold;
+  color: #6b6b6b;
+  font-size: 0.9em;
+  line-height: 1.48;
+  padding: 10px;
+}
+
+.council-card-descr-position {
+  padding: 10px;
+  font-size: 0.8em;
+}
+
+.council-card-descr-position:before {
+  display: block;
+  width: 30%;
+  margin: 0 auto;
+  content: '';
+  height: 3px;
+  background: #09c;
+  margin-bottom: 20px;
+}
+
+.col-council {
+  width: 31.33333%;
+  float: left;
+  padding: 1%;
+}
+
+.col-council {
+  width: 31.33333%;
+  float: left;
+  padding: 1%;
+}
+
+.col-council {
+  width: 31.33333%;
+  float: left;
+  padding: 1%;
+}
