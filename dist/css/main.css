@@ -8,7 +8,7 @@
 }
 
 .council {
-  padding: 20px 0px;
+  padding: 10px 10px;
 }
 
 .council-card {
@@ -61,19 +61,21 @@
 }
 
 .col-council {
-  width: 31.33333%;
+  width: 25%;
   float: left;
-  padding: 1%;
 }
 
 .col-council {
-  width: 31.33333%;
+  width: 25%;
   float: left;
-  padding: 1%;
 }
 
 .col-council {
-  width: 31.33333%;
+  width: 25%;
   float: left;
-  padding: 1%;
+}
+
+.col-council {
+  width: 25%;
+  float: left;
 }

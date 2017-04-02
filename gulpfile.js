@@ -18,7 +18,7 @@ gulp.task('clean', function(done) {
     done();
 });
 
-gulp.task('scss', gulp.series('clean', function(done) {
+gulp.task('scss', gulp.series('clean', 'goocdn', function(done) {
   return gulp.src('./scss/**/*.scss')
     .pipe(sass({
     	outputStyle: 'expanded'

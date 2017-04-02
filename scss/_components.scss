@@ -1,5 +1,5 @@
 .council{
-    padding: 20px 0px;
+    padding: 10px 10px;
     @extend %clearfix;
     &-card{
         text-align: center;
@@ -45,5 +45,5 @@
         }
     }
 }
-@include grid(3);
+@include grid(4);
 //@include cicada($pclass,$chclass);

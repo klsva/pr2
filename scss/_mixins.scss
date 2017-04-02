@@ -42,9 +42,8 @@
 @mixin grid($cols){
     @for $i from 1 through $cols{
         .col-#{$namediv}{
-            width: 94%/($cols);
-            float: left;
-            padding: 1%;
+            width: 100%/($cols);
+            float: left;         
         }
     }
 }
