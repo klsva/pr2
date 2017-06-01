@@ -7,17 +7,42 @@
   clear: both;
 }
 
-.council {
-  padding: 10px 10px;
+.cards {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin: 30px 0px;
+  border-bottom: solid 1px #eee;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .council-card {
   text-align: center;
   border-radius: 3px;
-  background: #fafafa;
-  margin: 20px 0;
+  margin: 20px 10px;
   padding: 20px 10px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 767px) {
+  .council-card {
+    background: #FFEFD5;
+  }
+}
+
+@media (min-width: 992px) {
+  .council-card {
+    background: #B0E0E6;
+  }
+}
+
+@media (min-width: 1200px) {
+  .council-card {
+    background: #fafafa;
+  }
 }
 
 .council-card-avatar {
@@ -60,22 +85,62 @@
   margin-bottom: 20px;
 }
 
-.col-council {
+.col-1 {
   width: 25%;
   float: left;
 }
 
-.col-council {
-  width: 25%;
+.col-2 {
+  width: 50%;
   float: left;
 }
 
-.col-council {
-  width: 25%;
+.col-3 {
+  width: 75%;
   float: left;
 }
 
-.col-council {
-  width: 25%;
+.col-4 {
+  width: 100%;
   float: left;
+}
+
+.cards:nth-child(2n+1) .council {
+  border-top-left-radius: 60%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 60%;
+  border-bottom-right-radius: 50%;
+  -webkit-transform: rotate(-6deg);
+  -ms-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+}
+
+.cards:nth-child(2n+1) .council:hover {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 60%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 60%;
+  -webkit-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+}
+
+.cards:nth-child(2n) .council {
+  border-top-left-radius: 80%;
+  border-top-right-radius: 70%;
+  border-bottom-left-radius: 80%;
+  border-bottom-right-radius: 70%;
+  -webkit-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+
+.cards:nth-child(2n) .council:hover {
+  border-top-left-radius: 70%;
+  border-top-right-radius: 80%;
+  border-bottom-left-radius: 70%;
+  border-bottom-right-radius: 80%;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
 }

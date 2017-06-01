@@ -22,28 +22,72 @@
 
 @mixin cicada($parent,$child){
     .#{$parent}{
-        &:n-child(2n+1) .#{$child}{
-            border-top-left-radius: 59%;
-            border-top-right-radius: 52%;
-            border-bottom-left-radius: 59%;
-            border-bottom-right-radius: 56%;
+        &:nth-child(2n+1) .#{$child} {
+            border-top-left-radius: 60%;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 60%;
+            border-bottom-right-radius: 50%;
+            -webkit-transform: rotate(-6deg);
+            -ms-transform: rotate(-6deg);
             transform: rotate(-6deg);
         }
-        &:n-child(2n+1) .#{$child}:hover{
-            border-top-left-radius: 51%;
-            border-top-right-radius: 67%;
-            border-bottom-left-radius: 64%;
-            border-bottom-right-radius: 56%;
-            transform: rotate(-4deg);
+        &:nth-child(2n+1) .#{$child}:hover {
+                border-top-left-radius: 50%;
+                border-top-right-radius: 60%;
+                border-bottom-left-radius: 50%;
+                border-bottom-right-radius: 60%;
+                -webkit-transform: rotate(-4deg);
+                -ms-transform: rotate(-4deg);
+                transform: rotate(-4deg);
         }
+        &:nth-child(2n) .#{$child} {
+            border-top-left-radius: 80%;
+            border-top-right-radius: 70%;
+            border-bottom-left-radius: 80%;
+            border-bottom-right-radius: 70%;
+            -webkit-transform: rotate(5deg);
+            -ms-transform: rotate(5deg);
+            transform: rotate(5deg);
+        }
+        &:nth-child(2n) .#{$child}:hover {
+            border-top-left-radius: 70%;
+            border-top-right-radius: 80%;
+            border-bottom-left-radius: 70%;
+            border-bottom-right-radius: 80%;
+            -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        
     }
 }
 
 @mixin grid($cols){
     @for $i from 1 through $cols{
-        .col-#{$namediv}{
-            width: 100%/($cols);
-            float: left;         
+        .col-#{$i}{
+            width: $width/($cols/$i);
+            float: left;
         }
     }
 }
+
+$breakpoints: (
+  small: 767px,
+  medium: 992px,
+  large: 1200px
+);
+
+@mixin respond-to($breakpoint) { 
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+ 
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+

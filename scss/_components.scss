@@ -1,11 +1,29 @@
+.cards{
+    width: 90%;
+    margin: 0 auto;
+}
+.title{
+    text-align: center;
+    margin: 30px 0px;
+    border-bottom: solid 1px #eee;
+    font-family: 'Courier New', Courier, monospace;
+}
 .council{
-    padding: 10px 10px;
     @extend %clearfix;
     &-card{
         text-align: center;
         border-radius: 3px;
-        background: $bgc;
-        margin: 20px 0;
+        
+        @include respond-to(small) {
+          background: #FFEFD5;
+        }
+        @include respond-to(medium) {
+          background: #B0E0E6;
+        }
+        @include respond-to(large) {
+          background: $bgc;
+        }
+        margin: 20px 10px;
         padding: 20px 10px;
         box-shadow: 0 2px 3px rgba(0,0,0,.3);
         &-avatar{
@@ -45,5 +63,5 @@
         }
     }
 }
-@include grid(4);
-//@include cicada($pclass,$chclass);
+@include grid($cols);
+@include cicada($parent,$child);
